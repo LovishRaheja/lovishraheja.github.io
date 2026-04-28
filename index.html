@@ -108,6 +108,16 @@
             list-style: none;
         }
         
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--color-text);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        
         .nav-links a {
             color: var(--color-text-dim);
             text-decoration: none;
@@ -643,28 +653,186 @@
         }
         
         @media (max-width: 768px) {
-            h1 {
-                font-size: 3rem;
+            nav {
+                padding: 1rem;
+            }
+            
+            .mobile-menu-toggle {
+                display: block;
             }
             
             .nav-links {
-                gap: 1.5rem;
+                position: fixed;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: rgba(10, 14, 20, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                gap: 0;
+                padding: 2rem;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+                transform: translateY(-100%);
+                opacity: 0;
+                transition: all 0.3s ease;
+                pointer-events: none;
+            }
+            
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                pointer-events: all;
+            }
+            
+            .nav-links li {
+                padding: 1rem 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            }
+            
+            .nav-links li:last-child {
+                border-bottom: none;
+            }
+            
+            .nav-links a {
+                font-size: 1.1rem;
+            }
+            
+            .hero {
+                padding: 6rem 1.5rem 3rem;
+                min-height: auto;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+                line-height: 1.2;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .hero-description {
+                font-size: 1rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
             }
             
             .stats-grid {
                 grid-template-columns: 1fr;
+                gap: 1rem;
+                margin-top: 2rem;
+            }
+            
+            .stat-card {
+                padding: 1.5rem;
+            }
+            
+            .section {
+                padding: 3rem 1.5rem;
             }
             
             .section-title {
                 font-size: 2rem;
             }
             
+            .section-description {
+                font-size: 1rem;
+            }
+            
+            .tech-category {
+                padding: 1.5rem;
+            }
+            
+            .tech-items {
+                gap: 0.75rem;
+            }
+            
+            .tech-item {
+                font-size: 0.85rem;
+                padding: 0.6rem 1rem;
+            }
+            
             .timeline {
-                padding-left: 2rem;
+                padding-left: 1.5rem;
             }
             
             .timeline-item {
-                padding-left: 2rem;
+                padding-left: 1.5rem;
+                margin-bottom: 2rem;
+            }
+            
+            .timeline-item::before {
+                left: -2.25rem;
+                width: 12px;
+                height: 12px;
+            }
+            
+            .experience-card {
+                padding: 1.5rem;
+            }
+            
+            .experience-role {
+                font-size: 1.3rem;
+            }
+            
+            .experience-company {
+                font-size: 1rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-card {
+                padding: 2rem;
+            }
+            
+            .contact-info,
+            .contact-form {
+                padding: 2rem;
+            }
+            
+            .contact-item {
+                padding: 1rem;
+                flex-direction: row;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .logo {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 1.75rem;
+            }
+            
+            .stat-value {
+                font-size: 2rem;
+            }
+            
+            .tech-category h3 {
+                font-size: 1.2rem;
+            }
+            
+            .experience-role {
+                font-size: 1.2rem;
+            }
+            
+            .service-card h3 {
+                font-size: 1.3rem;
             }
         }
         
@@ -685,6 +853,9 @@
     <header>
         <nav>
             <div class="logo">{ Lovish }</div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                ☰
+            </button>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#experience">Experience</a></li>
@@ -1080,6 +1251,31 @@
     </footer>
 
     <script>
+        // Mobile menu toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuToggle.textContent = '☰';
+            });
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                navLinks.classList.remove('active');
+                mobileMenuToggle.textContent = '☰';
+            }
+        });
+        
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
