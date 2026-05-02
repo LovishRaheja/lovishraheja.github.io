@@ -482,6 +482,207 @@
             font-weight: bold;
         }
         
+        /* Projects */
+        .project-showcase {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .project-card {
+            background: var(--color-surface);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s;
+        }
+        
+        .project-card:hover {
+            border-color: var(--color-primary);
+            box-shadow: var(--shadow-glow);
+        }
+        
+        .project-header {
+            margin-bottom: 2rem;
+        }
+        
+        .project-badge {
+            display: inline-block;
+            background: rgba(0, 212, 170, 0.1);
+            color: var(--color-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(0, 212, 170, 0.3);
+        }
+        
+        .project-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            color: var(--color-text);
+        }
+        
+        .project-company {
+            font-size: 1.1rem;
+            color: var(--color-text-dim);
+            font-family: var(--font-mono);
+        }
+        
+        .project-description {
+            margin-bottom: 2.5rem;
+        }
+        
+        .project-description p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: var(--color-text-dim);
+        }
+        
+        .project-description strong {
+            color: var(--color-primary);
+            font-weight: 700;
+        }
+        
+        .project-highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        .highlight-item {
+            background: var(--color-surface-light);
+            padding: 1.5rem;
+            border-radius: 12px;
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s;
+        }
+        
+        .highlight-item:hover {
+            background: rgba(0, 212, 170, 0.05);
+            border-color: var(--color-primary);
+            transform: translateY(-2px);
+        }
+        
+        .highlight-icon {
+            font-size: 1.8rem;
+        }
+        
+        .highlight-label {
+            font-size: 0.85rem;
+            color: var(--color-text-dim);
+            margin-bottom: 0.25rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .highlight-value {
+            font-weight: 700;
+            color: var(--color-text);
+            font-size: 1rem;
+        }
+        
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        .tech-badge {
+            background: var(--color-surface-light);
+            color: var(--color-text);
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s;
+        }
+        
+        .tech-badge:hover {
+            background: rgba(0, 212, 170, 0.1);
+            border-color: var(--color-primary);
+            color: var(--color-primary);
+        }
+        
+        .project-screenshots {
+            margin-bottom: 2.5rem;
+        }
+        
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .screenshot-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            background: var(--color-surface-light);
+            aspect-ratio: 9/16;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s;
+        }
+        
+        .screenshot-item:hover {
+            transform: translateY(-8px);
+            border-color: var(--color-primary);
+            box-shadow: 0 12px 40px rgba(0, 212, 170, 0.2);
+        }
+        
+        .screenshot-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        
+        .screenshot-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .project-achievements {
+            background: var(--color-surface-light);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .project-achievements h4 {
+            color: var(--color-primary);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .project-achievements ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .project-achievements li {
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+            position: relative;
+            color: var(--color-text-dim);
+            line-height: 1.6;
+        }
+        
+        .project-achievements li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--color-primary);
+            font-weight: bold;
+        }
+        
         /* Services */
         .services-grid {
             display: grid;
@@ -795,6 +996,27 @@
                 padding: 2rem;
             }
             
+            .project-card {
+                padding: 2rem;
+            }
+            
+            .project-title {
+                font-size: 1.8rem;
+            }
+            
+            .project-highlights {
+                grid-template-columns: 1fr;
+            }
+            
+            .screenshot-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+            
+            .project-achievements {
+                padding: 1.5rem;
+            }
+            
             .contact-info,
             .contact-form {
                 padding: 2rem;
@@ -834,6 +1056,14 @@
             .service-card h3 {
                 font-size: 1.3rem;
             }
+            
+            .screenshot-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .project-title {
+                font-size: 1.5rem;
+            }
         }
         
         /* Scroll animations */
@@ -858,6 +1088,7 @@
             </button>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#tech">Tech Stack</a></li>
                 <li><a href="#services">Services</a></li>
@@ -912,6 +1143,104 @@
                         <div class="stat-value">99.94%</div>
                         <div class="stat-label">Uptime Achieved</div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="section-header">
+            <div class="section-tag">// FEATURED WORK</div>
+            <h2 class="section-title">Projects & Impact</h2>
+            <p class="section-description">
+                High-performance applications serving millions of users daily
+            </p>
+        </div>
+        
+        <div class="project-showcase">
+            <div class="project-card fade-in">
+                <div class="project-header">
+                    <div class="project-badge">Featured Project</div>
+                    <h3 class="project-title">JioHotstar (Prev. JioCinema)</h3>
+                    <p class="project-company">Star India Pvt. Ltd. • 2022-2025</p>
+                </div>
+                
+                <div class="project-description">
+                    <p>
+                        India's leading streaming platform serving <strong>450M+ users</strong> with live sports, 
+                        movies, and shows. Built and scaled the Android application handling 
+                        <strong>30M+ concurrent users</strong> during marquee events like IPL with 
+                        <strong>99.94% uptime</strong>.
+                    </p>
+                </div>
+                
+                <div class="project-highlights">
+                    <div class="highlight-item">
+                        <div class="highlight-icon">⚡</div>
+                        <div class="highlight-content">
+                            <div class="highlight-label">Performance</div>
+                            <div class="highlight-value">~20% faster startup, 30% less buffering</div>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon">📊</div>
+                        <div class="highlight-content">
+                            <div class="highlight-label">Scale</div>
+                            <div class="highlight-value">30M+ concurrent users during live events</div>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon">🎯</div>
+                        <div class="highlight-content">
+                            <div class="highlight-label">Reliability</div>
+                            <div class="highlight-value">99.94% uptime under peak loads</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-tech">
+                    <span class="tech-badge">Kotlin</span>
+                    <span class="tech-badge">Jetpack Compose</span>
+                    <span class="tech-badge">ExoPlayer/Media3</span>
+                    <span class="tech-badge">MVVM</span>
+                    <span class="tech-badge">Clean Architecture</span>
+                    <span class="tech-badge">Coroutines</span>
+                    <span class="tech-badge">Hilt</span>
+                    <span class="tech-badge">Room</span>
+                </div>
+                
+                <div class="project-screenshots">
+                    <div class="screenshot-grid">
+                        <div class="screenshot-item">
+                            <img src="screenshot-1.webp" alt="JioHotstar Home Screen" loading="lazy">
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="screenshot-2.webp" alt="JioHotstar Profiles" loading="lazy">
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="screenshot-3.webp" alt="JioHotstar Content Details" loading="lazy">
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="screenshot-4.webp" alt="JioHotstar Movies Grid" loading="lazy">
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="screenshot-5.webp" alt="JioHotstar Continue Watching" loading="lazy">
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="screenshot-6.webp" alt="JioHotstar Multi-screen" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-achievements">
+                    <h4>Key Contributions:</h4>
+                    <ul>
+                        <li>Led migration from ExoPlayer to Media3, reducing feature rollout time by 25%</li>
+                        <li>Built Jetpack Compose UI modules for player and content surfaces</li>
+                        <li>Optimized video startup and buffering, improving session duration and ad revenue</li>
+                        <li>Implemented real-time monitoring with Mux, Amplitude, and Mixpanel</li>
+                        <li>Acted as on-call Game Marshal during critical live events</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -1153,6 +1482,83 @@
                     Implement comprehensive test suites with unit tests, integration tests, 
                     and UI automation. Establish CI/CD pipelines and quality gates.
                 </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="resume" class="section" style="background: var(--color-surface);">
+        <div class="section-header">
+            <div class="section-tag">// RESUME</div>
+            <h2 class="section-title">Download My Resume</h2>
+            <p class="section-description">
+                View my complete professional experience and technical skills
+            </p>
+        </div>
+        
+        <div style="max-width: 800px; margin: 0 auto;">
+            <div style="background: var(--color-surface-light); padding: 3rem; border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.05); text-align: center;">
+                <div style="font-size: 4rem; margin-bottom: 1.5rem;">📄</div>
+                
+                <h3 style="font-size: 1.8rem; margin-bottom: 1rem; font-weight: 700;">
+                    Lovish Raheja - Resume
+                </h3>
+                
+                <p style="color: var(--color-text-dim); margin-bottom: 2rem; font-size: 1.1rem;">
+                    Senior Android Developer | 8+ Years Experience<br>
+                    Kotlin • Jetpack Compose • Clean Architecture
+                </p>
+                
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
+                    <div style="background: var(--color-surface); padding: 1rem 1.5rem; border-radius: 8px; border: 1px solid rgba(0, 212, 170, 0.2);">
+                        <div style="font-size: 0.85rem; color: var(--color-text-dim); margin-bottom: 0.25rem;">Experience</div>
+                        <div style="font-weight: 700; color: var(--color-primary); font-family: var(--font-mono);">8+ Years</div>
+                    </div>
+                    <div style="background: var(--color-surface); padding: 1rem 1.5rem; border-radius: 8px; border: 1px solid rgba(0, 212, 170, 0.2);">
+                        <div style="font-size: 0.85rem; color: var(--color-text-dim); margin-bottom: 0.25rem;">Users Served</div>
+                        <div style="font-weight: 700; color: var(--color-primary); font-family: var(--font-mono);">450M+</div>
+                    </div>
+                    <div style="background: var(--color-surface); padding: 1rem 1.5rem; border-radius: 8px; border: 1px solid rgba(0, 212, 170, 0.2);">
+                        <div style="font-size: 0.85rem; color: var(--color-text-dim); margin-bottom: 0.25rem;">File Format</div>
+                        <div style="font-weight: 700; color: var(--color-primary); font-family: var(--font-mono);">PDF</div>
+                    </div>
+                </div>
+                
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="Lovish_Raheja_Resume.pdf" download class="btn btn-primary" style="text-decoration: none;">
+                        <span>📥 Download Resume</span>
+                    </a>
+                    <a href="Lovish_Raheja_Resume.pdf" target="_blank" class="btn btn-secondary" style="text-decoration: none;">
+                        <span>👁️ View Online</span>
+                    </a>
+                </div>
+                
+                <p style="margin-top: 2rem; font-size: 0.9rem; color: var(--color-text-dim); font-family: var(--font-mono);">
+                    Last updated: April 2026 • PDF Format • ATS-Friendly
+                </p>
+            </div>
+            
+            <div style="margin-top: 2rem; padding: 2rem; background: rgba(0, 212, 170, 0.05); border-radius: 12px; border: 1px solid rgba(0, 212, 170, 0.2);">
+                <h4 style="color: var(--color-primary); margin-bottom: 1rem; font-size: 1.2rem;">
+                    💡 What's Inside
+                </h4>
+                <ul style="list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                    <li style="padding-left: 1.5rem; position: relative; color: var(--color-text-dim);">
+                        <span style="position: absolute; left: 0; color: var(--color-primary);">✓</span>
+                        Detailed work experience at JioHotstar, Rakuten, Wipro
+                    </li>
+                    <li style="padding-left: 1.5rem; position: relative; color: var(--color-text-dim);">
+                        <span style="position: absolute; left: 0; color: var(--color-primary);">✓</span>
+                        Complete tech stack and skills
+                    </li>
+                    <li style="padding-left: 1.5rem; position: relative; color: var(--color-text-dim);">
+                        <span style="position: absolute; left: 0; color: var(--color-primary);">✓</span>
+                        Quantified achievements and impact
+                    </li>
+                    <li style="padding-left: 1.5rem; position: relative; color: var(--color-text-dim);">
+                        <span style="position: absolute; left: 0; color: var(--color-primary);">✓</span>
+                        Links to GitHub, LinkedIn & Portfolio
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
