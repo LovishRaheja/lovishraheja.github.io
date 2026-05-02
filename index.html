@@ -939,13 +939,8 @@
                 padding: 1rem;
             }
             
-            .theme-toggle {
-                order: 2;
-            }
-            
             .mobile-menu-toggle {
                 display: block;
-                order: 3;
             }
             
             .nav-links {
@@ -1169,9 +1164,6 @@
     <header>
         <nav>
             <div class="logo">{ Lovish }</div>
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                <span class="theme-toggle-icon">🌙</span>
-            </button>
             <button class="mobile-menu-toggle" aria-label="Toggle menu">
                 ☰
             </button>
@@ -1182,6 +1174,11 @@
                 <li><a href="#tech">Tech Stack</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                        <span class="theme-toggle-icon">🌙</span>
+                    </button>
+                </li>
             </ul>
         </nav>
     </header>
