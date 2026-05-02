@@ -692,6 +692,53 @@
             color: var(--color-primary);
         }
         
+        .project-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .play-store-badge {
+            transition: transform 0.3s;
+        }
+        
+        .play-store-badge:hover {
+            transform: translateY(-4px);
+        }
+        
+        .play-store-badge img {
+            height: 60px;
+            display: block;
+        }
+        
+        .project-stats {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--color-surface-light);
+            padding: 0.75rem 1.25rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .stat-icon {
+            font-size: 1.2rem;
+        }
+        
+        .stat-text {
+            font-weight: 600;
+            color: var(--color-text);
+            font-size: 0.95rem;
+        }
+        
         .project-screenshots {
             margin-bottom: 2.5rem;
         }
@@ -1295,6 +1342,22 @@
                     <span class="tech-badge">Room</span>
                 </div>
                 
+                <div class="project-links">
+                    <a href="https://play.google.com/store/apps/details?id=in.startv.hotstar&hl=en" target="_blank" rel="noopener noreferrer" class="play-store-badge">
+                        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" style="height: 60px;">
+                    </a>
+                    <div class="project-stats">
+                        <div class="stat-item">
+                            <span class="stat-icon">📥</span>
+                            <span class="stat-text">500M+ Downloads</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-icon">⭐</span>
+                            <span class="stat-text">4.2+ Rating</span>
+                        </div>
+                    </div>
+                </div>
+                
                 <div class="project-screenshots">
                     <div class="screenshot-grid">
                         <div class="screenshot-item">
@@ -1326,6 +1389,85 @@
                         <li>Optimized video startup and buffering, improving session duration and ad revenue</li>
                         <li>Implemented real-time monitoring with Mux, Amplitude, and Mixpanel</li>
                         <li>Acted as on-call Game Marshal during critical live events</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="project-card fade-in" style="margin-top: 3rem;">
+                <div class="project-header">
+                    <div class="project-badge" style="background: rgba(191, 0, 0, 0.1); color: #bf0000; border-color: rgba(191, 0, 0, 0.3);">Featured Project</div>
+                    <h3 class="project-title">Rakuten Link</h3>
+                    <p class="project-company">Rakuten India Pvt. Ltd. • 2020-2022</p>
+                </div>
+                
+                <div class="project-description">
+                    <p>
+                        Real-time communication platform providing <strong>free calling and messaging</strong> 
+                        to Rakuten Mobile subscribers. Built and optimized Android application serving 
+                        <strong>10M+ users</strong> with low-latency voice and video calling capabilities.
+                    </p>
+                </div>
+                
+                <div class="project-highlights">
+                    <div class="highlight-item">
+                        <div class="highlight-icon">📞</div>
+                        <div class="highlight-content">
+                            <div class="highlight-label">Communication</div>
+                            <div class="highlight-value">Real-time chat & calling for 10M+ users</div>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon">🧪</div>
+                        <div class="highlight-content">
+                            <div class="highlight-label">Testing</div>
+                            <div class="highlight-value">45% → 80% test coverage, 40% fewer bugs</div>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon">⚡</div>
+                        <div class="highlight-content">
+                            <div class="highlight-label">Performance</div>
+                            <div class="highlight-value">15% faster call setup latency</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-tech">
+                    <span class="tech-badge">Kotlin</span>
+                    <span class="tech-badge">WebRTC</span>
+                    <span class="tech-badge">MVVM</span>
+                    <span class="tech-badge">RxJava</span>
+                    <span class="tech-badge">Retrofit</span>
+                    <span class="tech-badge">Room</span>
+                    <span class="tech-badge">JUnit</span>
+                    <span class="tech-badge">Mockito</span>
+                </div>
+                
+                <div class="project-links">
+                    <a href="https://play.google.com/store/apps/details?id=jp.co.rakuten.rmw" target="_blank" rel="noopener noreferrer" class="play-store-badge">
+                        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" style="height: 60px;">
+                    </a>
+                    <div class="project-stats">
+                        <div class="stat-item">
+                            <span class="stat-icon">📥</span>
+                            <span class="stat-text">10M+ Downloads</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-icon">⭐</span>
+                            <span class="stat-text">4.0+ Rating</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-achievements">
+                    <h4>Key Contributions:</h4>
+                    <ul>
+                        <li>Built real-time chat and calling features optimizing low-latency communication flows</li>
+                        <li>Increased test coverage from 45% to 80%, reducing production bugs by 40%</li>
+                        <li>Reduced call setup latency by 15%, improving user experience in time-sensitive interactions</li>
+                        <li>Introduced structured code review practices improving maintainability</li>
+                        <li>Collaborated with backend teams on GraphQL-based APIs for efficient client-side integration</li>
+                        <li>Acted as on-call incident lead diagnosing issues across client, CDN, and backend layers</li>
                     </ul>
                 </div>
             </div>
